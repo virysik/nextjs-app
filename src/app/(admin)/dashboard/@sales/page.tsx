@@ -1,5 +1,4 @@
 import DashboardCard from '@/app/components/dashboard-card';
-import MagicButton from '@/app/components/magic-button';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableCell from '@/app/components/summary-table-cell';
 import SummaryTableHeader from '@/app/components/summary-table-header';
@@ -13,14 +12,7 @@ export default async function Page() {
   });
 
   return (
-    <DashboardCard
-      label={
-        <>
-          Sales details
-          <MagicButton />
-        </>
-      }
-    >
+    <DashboardCard label={'Sales details'}>
       <SummaryTable
         headers={
           <>
