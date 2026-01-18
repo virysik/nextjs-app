@@ -1,9 +1,8 @@
-import React from 'react';
-import { getSummaryStats } from '@/lib/api';
+import { getSummaryStats, SummaryStats } from '@/lib/api';
 import StatCard, { StatCardType } from '@/app/components/stat-card/stat-card';
 import Link from 'next/link';
 
-const labelByStat = {
+const labelByStat: Record<keyof SummaryStats, string> = {
   promotions: 'Total promotions',
   categories: 'Total categories',
   newCompanies: 'New companies',

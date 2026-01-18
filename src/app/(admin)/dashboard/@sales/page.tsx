@@ -2,14 +2,10 @@ import DashboardCard from '@/app/components/dashboard-card';
 import SummaryTable from '@/app/components/summary-table';
 import SummaryTableCell from '@/app/components/summary-table-cell';
 import SummaryTableHeader from '@/app/components/summary-table-header';
-import { getSummarySales, SummarySalesI } from '@/lib/api';
+import { getSummarySales } from '@/lib/api';
 
 export default async function Page() {
-  const data: SummarySalesI[] = await new Promise((res) => {
-    setTimeout(() => {
-      res(getSummarySales());
-    }, 4000);
-  });
+  const data = await getSummarySales();
 
   return (
     <DashboardCard label={'Sales details'}>
